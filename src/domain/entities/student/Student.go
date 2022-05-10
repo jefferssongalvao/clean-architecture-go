@@ -57,8 +57,8 @@ func (student *Student) Email() string {
 	return student.email.GetEmail()
 }
 
-func (student *Student) Phones() []string {
-	var phones []string
+func (student *Student) Phones() []value_objects.Phone {
+	var phones []value_objects.Phone
 	for _, phone := range student.phones {
 		phones = append(phones, phone.GetPhone())
 	}

@@ -42,6 +42,10 @@ func (phone *Phone) GetNumber() string {
 	return phone.number
 }
 
-func (phone *Phone) GetPhone() string {
+func (phone *Phone) GetPhone() Phone {
+	return *phone
+}
+
+func (phone *Phone) FormatPhone() string {
 	return fmt.Sprintf("(%s) %s", phone.ddd, phone.number)
 }
